@@ -8,6 +8,7 @@
                 <li data-target="#demo" data-slide-to="2"></li>
             </ul>
             <!-- The slideshow -->
+            
             <div class="carousel-inner text-light">
                 <div class="carousel-item active">
                     <img src="{{asset('img/img (1).jpg')}}" class="img-carrusel" alt="Cury y crias">

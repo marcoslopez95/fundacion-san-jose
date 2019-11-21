@@ -5,7 +5,10 @@
 @endsection
 
 @section('contenido')
+
+        {{-- contenedor del carrusel --}}
     @include('principal.carrusel')
+    
 <div class="separador"></div>
     
     <div class="container-fluid">
