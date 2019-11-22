@@ -17,4 +17,7 @@ class Donacion extends Model
         'dona-stk',
         'dona-prs',
     ];
+    public function donacions(){
+        return $this->belongsToMany('App\Model\Actividad');
+    }
 }

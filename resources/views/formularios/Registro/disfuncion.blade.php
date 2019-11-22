@@ -24,13 +24,29 @@
                 <ejemplo></ejemplo>
                 <Modal></Modal>
             </component> --}}
+
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        Active</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        item</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        item</a> 
+                </li>
+            </ul>
+            <prueba></prueba>
             Debes rellenar el siguiente formulario
 
             {!! Form::open() !!}
             
                 @for ($i = 0; $i < 10; $i++)
                 {!! Form::label('', "Discapacidad $i", ['class'=> 'form-group']) !!}
-                {!! Form::checkbox("Prueba $i", 's1', ['class'=> 'form-group']) !!}    
+                {!! Form::checkbox("Prueba $i", 's1', ['class'=> 'form-group']) !!}   
                 @endfor
                 
 
@@ -39,7 +55,6 @@
             {{-- <component v-bind:is="ejemplo"></component>
             <component v-bind:is="ejemplo"></component> --}}
     </div>
-    </form>
 </div><!-- Fin del card body-->
 </div><!-- fin del container del card-->
 </div> <!-- Fin del card-body-->

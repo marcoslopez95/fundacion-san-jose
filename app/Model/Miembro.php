@@ -24,4 +24,7 @@ class Miembro extends Model
         'miem-tel',
         'miem-cse',
     ];
+    public function cargos(){
+        return $this->hasOne('App\Model\Cargo','carg-cod','miem-ced');
+    }
 }

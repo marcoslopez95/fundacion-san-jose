@@ -16,4 +16,7 @@ class Actividad extends Model
         'acti-des',
         'acti-fec',
     ];
+    public function donacions(){
+        return $this->hasMany('App\Model\Donacion','dona-cod', 'acti-cod');
+    }
 }
