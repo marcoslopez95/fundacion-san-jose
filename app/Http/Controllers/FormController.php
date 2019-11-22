@@ -18,10 +18,11 @@ class FormController extends Controller
         return view('formularios.Registro.disfuncion');
     }
 
-    public function guardar_disfuncion(Request $request)
+    public function guardar_disfuncion(Request $request, Discapacidad $discapacidad)
     {
         //
-        return view('formularios.Registro.disfuncion');
+        dd($discapacidad->all());
+        // return view('formularios.Registro.disfuncion');
     }
 
     /**

@@ -13,11 +13,11 @@ class CreateTableFsjtAcse extends Migration
      */
     public function up()
     {
-        Schema::create('fsjt-acse', function (Blueprint $table) {
-            $table->string('acse-cac',5)->comment('codigo de la actividad');
-            $table->string('acse-cse',5)->comment('codigo del sector atendido por la actividad');
-            $table->foreign('acse-cse')->references('sect-cod')->on('fsjm-sect')->onDelete('cascade');
-            $table->foreign('acse-cac')->references('acti-cod')->on('fsjm-acti')->onDelete('cascade');
+        Schema::create('fsjt_acse', function (Blueprint $table) {
+            $table->string('acse_cac',5)->comment('codigo de la actividad');
+            $table->string('acse_cse',5)->comment('codigo del sector atendido por la actividad');
+            $table->foreign('acse_cse')->references('sect_cod')->on('fsjm_sect')->onDelete('cascade');
+            $table->foreign('acse_cac')->references('acti_cod')->on('fsjm_acti')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTableFsjtAcse extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjt-acse');
+        Schema::dropIfExists('fsjt_acse');
     }
 }

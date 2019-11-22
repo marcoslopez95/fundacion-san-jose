@@ -13,9 +13,9 @@ class CreateTableFsjmCond extends Migration
      */
     public function up()
     {
-        Schema::create('fsjm-cond', function (Blueprint $table) {
-            $table->string('cond-cod',5)->primary()->comment('Codigo de la condición');
-            $table->string('cond-des',50)->comment('Descripción de la Condición');
+        Schema::create('fsjm_cond', function (Blueprint $table) {
+            $table->string('cond_cod',5)->primary()->comment('Codigo de la condición');
+            $table->string('cond_des',50)->comment('Descripción de la Condición');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateTableFsjmCond extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjm-cond');
+        Schema::dropIfExists('fsjm_cond');
     }
 }

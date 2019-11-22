@@ -13,9 +13,9 @@ class AddForeignKeySectorTableFsjmMiem extends Migration
      */
     public function up()
     {
-        Schema::table('fsjm-miem', function (Blueprint $table) {
+        Schema::table('fsjm_miem', function (Blueprint $table) {
             //
-            $table->foreign('miem-cse')->references('sect-cod')->on('fsjm-sect')->onDelete('cascade');
+            $table->foreign('miem_cse')->references('sect_cod')->on('fsjm_sect')->onDelete('cascade');
         });
     }
 
@@ -26,7 +26,7 @@ class AddForeignKeySectorTableFsjmMiem extends Migration
      */
     public function down()
     {
-        Schema::table('fsjm-miem', function (Blueprint $table) {
+        Schema::table('fsjm_miem', function (Blueprint $table) {
             //
         });
     }

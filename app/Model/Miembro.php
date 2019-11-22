@@ -23,6 +23,7 @@ class Miembro extends Model
         'miem-sex',
         'miem-tel',
         'miem-cse',
+        'miem-pss',
     ];
     public function cargos(){
         return $this->belongsToMany('App\Model\Cargo','fsjt-mcar','mcar-cmi','mcar-cca');

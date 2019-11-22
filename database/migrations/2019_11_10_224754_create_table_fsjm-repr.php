@@ -13,18 +13,18 @@ class CreateTableFsjmRepr extends Migration
      */
     public function up()
     {
-        Schema::create('fsjm-repr', function (Blueprint $table) {
-            $table->string('repr-ced',8)->primary()->comment('Cedula del representante');
-            $table->char('repr-no1',15)->comment('Primer nombre del representante');
-            $table->char('repr-no2',15)->comment('Primer nombre del representante');
-            $table->char('repr-no3',15)->comment('Primer nombre del representante');
-            $table->char('repr-ap1',15)->comment('Primer nombre del representante');
-            $table->char('repr-ap2',15)->comment('Primer nombre del representante');
-            $table->integer('repr-eda',false,true)->comment('edad del representante');
-            $table->date('repr-fna')->comment('Fecha de nacimiento del representante');
-            $table->char('repr-sex',1)->comment('Sexo del representante (F/M)');
-            $table->string('repr-tel',11)->comment('Telefono del representante');
-            $table->string('repr-cse',5)->comment('Codigo del sector donde vive el representante');
+        Schema::create('fsjm_repr', function (Blueprint $table) {
+            $table->string('repr_ced',8)->primary()->comment('Cedula del representante');
+            $table->char('repr_no1',15)->comment('Primer nombre del representante');
+            $table->char('repr_no2',15)->comment('Primer nombre del representante');
+            $table->char('repr_no3',15)->comment('Primer nombre del representante');
+            $table->char('repr_ap1',15)->comment('Primer nombre del representante');
+            $table->char('repr_ap2',15)->comment('Primer nombre del representante');
+            $table->integer('repr_eda',false,true)->comment('edad del representante');
+            $table->date('repr_fna')->comment('Fecha de nacimiento del representante');
+            $table->char('repr_sex',1)->comment('Sexo del representante (F/M)');
+            $table->string('repr_tel',11)->comment('Telefono del representante');
+            $table->string('repr_cse',5)->comment('Codigo del sector donde vive el representante');
             
             $table->timestamps();
         });
@@ -37,6 +37,6 @@ class CreateTableFsjmRepr extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjm-repr');
+        Schema::dropIfExists('fsjm_repr');
     }
 }

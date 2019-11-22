@@ -13,14 +13,14 @@ class CreateTableFsjtIndo extends Migration
      */
     public function up()
     {
-        Schema::create('fsjt-indo', function (Blueprint $table) {
-            $table->string('indo-cin',5)->comment('codigo de la institución');
-            $table->string('indo-cdo',5)->comment('codigo de la donación');
-            $table->integer('indo-cad',false,true)->comment('Cantidad de la donación');
-            $table->date('indo-fec')->comment('fecha de la donación');
+        Schema::create('fsjt_indo', function (Blueprint $table) {
+            $table->string('indo_cin',5)->comment('codigo de la institución');
+            $table->string('indo_cdo',5)->comment('codigo de la donación');
+            $table->integer('indo_cad',false,true)->comment('Cantidad de la donación');
+            $table->date('indo_fec')->comment('fecha de la donación');
 
-            $table->foreign('indo-cin')->references('inst-cod')->on('fsjm-inst')->onDelete('cascade');
-            $table->foreign('indo-cdo')->references('dona-cod')->on('fsjm-dona')->onDelete('cascade');
+            $table->foreign('indo_cin')->references('inst_cod')->on('fsjm_inst')->onDelete('cascade');
+            $table->foreign('indo_cdo')->references('dona_cod')->on('fsjm_dona')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class CreateTableFsjtIndo extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjt-indo');
+        Schema::dropIfExists('fsjt_indo');
     }
 }

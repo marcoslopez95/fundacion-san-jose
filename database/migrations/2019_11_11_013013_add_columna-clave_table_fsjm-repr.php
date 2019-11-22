@@ -13,9 +13,9 @@ class AddColumnaClaveTableFsjmRepr extends Migration
      */
     public function up()
     {
-        Schema::table('fsjm-repr', function (Blueprint $table) {
+        Schema::table('fsjm_repr', function (Blueprint $table) {
             //
-            $table->string('repr-pass',10)->comment('Contraseña del representante');
+            $table->string('repr_pss',10)->comment('Contraseña del representante');
         });
     }
 
@@ -26,7 +26,7 @@ class AddColumnaClaveTableFsjmRepr extends Migration
      */
     public function down()
     {
-        Schema::table('fsjm-repr', function (Blueprint $table) {
+        Schema::table('fsjm_repr', function (Blueprint $table) {
             //
         });
     }

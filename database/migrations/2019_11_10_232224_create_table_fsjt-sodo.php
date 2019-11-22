@@ -13,13 +13,13 @@ class CreateTableFsjtSodo extends Migration
      */
     public function up()
     {
-        Schema::create('fsjt-sodo', function (Blueprint $table) {
-            $table->string('sodo-cso',5)->comment('codigo de la solicitud');
-            $table->string('sodo-cdo',5)->comment('codigo de la donación');
-            $table->integer('sodo-cnd',false,true)->comment('Cantidad de unidades de donación');
+        Schema::create('fsjt_sodo', function (Blueprint $table) {
+            $table->string('sodo_cso',5)->comment('codigo de la solicitud');
+            $table->string('sodo_cdo',5)->comment('codigo de la donación');
+            $table->integer('sodo_cnd',false,true)->comment('Cantidad de unidades de donación');
 
-            $table->foreign('sodo-cso')->references('soli-cod')->on('fsjt-soli');
-            $table->foreign('sodo-cdo')->references('dona-cod')->on('fsjm-dona');
+            $table->foreign('sodo_cso')->references('soli_cod')->on('fsjt_soli');
+            $table->foreign('sodo_cdo')->references('dona_cod')->on('fsjm_dona');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateTableFsjtSodo extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjt-sodo');
+        Schema::dropIfExists('fsjt_sodo');
     }
 }

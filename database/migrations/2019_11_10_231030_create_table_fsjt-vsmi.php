@@ -13,15 +13,15 @@ class CreateTableFsjtVsmi extends Migration
      */
     public function up()
     {
-        Schema::create('fsjt-vsmi', function (Blueprint $table) {
-            $table->string('vsmi-cmi',8)->comment('cedula del miembro que hizo la visita');
-            $table->string('vsmi-cre',8)->comment('Cedula del representante a visitar');
-            $table->string('vsmi-cvs',5)->comment('codigo de la visita social');
-            $table->date('vsmi-fvs')->comment('Fecha de la visita');
+        Schema::create('fsjt_vsmi', function (Blueprint $table) {
+            $table->string('vsmi_cmi',8)->comment('cedula del miembro que hizo la visita');
+            $table->string('vsmi_cre',8)->comment('Cedula del representante a visitar');
+            $table->string('vsmi_cvs',5)->comment('codigo de la visita social');
+            $table->date('vsmi_fvs')->comment('Fecha de la visita');
 
-            $table->foreign('vsmi-cmi')->references('miem-ced')->on('fsjm-miem')->onDelete('cascade');
-            $table->foreign('vsmi-cre')->references('repr-ced')->on('fsjm-repr')->onDelete('cascade');
-            $table->foreign('vsmi-cvs')->references('viso-cod')->on('fsjm-viso')->onDelete('cascade');
+            $table->foreign('vsmi_cmi')->references('miem_ced')->on('fsjm_miem')->onDelete('cascade');
+            $table->foreign('vsmi_cre')->references('repr_ced')->on('fsjm_repr')->onDelete('cascade');
+            $table->foreign('vsmi_cvs')->references('viso_cod')->on('fsjm_viso')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateTableFsjtVsmi extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjt-vsmi');
+        Schema::dropIfExists('fsjt_vsmi');
     }
 }

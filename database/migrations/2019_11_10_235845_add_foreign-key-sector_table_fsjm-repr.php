@@ -13,9 +13,9 @@ class AddForeignKeySectorTableFsjmRepr extends Migration
      */
     public function up()
     {
-        Schema::table('fsjm-repr', function (Blueprint $table) {
+        Schema::table('fsjm_repr', function (Blueprint $table) {
             //
-            $table->foreign('repr-cse')->references('sect-cod')->on('fsjm-sect')->onDelete('cascade');
+            $table->foreign('repr_cse')->references('sect_cod')->on('fsjm_sect')->onDelete('cascade');
         });
     }
 
@@ -26,9 +26,9 @@ class AddForeignKeySectorTableFsjmRepr extends Migration
      */
     public function down()
     {
-        Schema::table('fsjm-repr', function (Blueprint $table) {
+        Schema::table('fsjm_repr', function (Blueprint $table) {
             //
-            // $table->dropForeign('fsjm-repr_repr-cse_foreign');
+            $table->dropForeign('fsjm_repr_repr_cse_foreign');
         });
     }
 }

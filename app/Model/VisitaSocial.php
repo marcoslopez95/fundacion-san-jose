@@ -19,6 +19,6 @@ class VisitaSocial extends Model
 
     public function miembros()
     {
-        return $this->belongsToMany('App\Model\Miembro','fsjt-vsmi','vsmi-cvs','vsmi-');
+        return $this->belongsToMany('App\Model\Miembro','fsjt-vsmi','vsmi-cvs','vsmi-cmi');
     }
 }

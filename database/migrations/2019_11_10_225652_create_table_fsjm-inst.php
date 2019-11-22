@@ -13,10 +13,10 @@ class CreateTableFsjmInst extends Migration
      */
     public function up()
     {
-        Schema::create('fsjm-inst', function (Blueprint $table) {
-            $table->string('inst-cod',5)->primary()->comment('Codigo de la institución');
-            $table->string('inst-nom',50)->comment('Nombre de la institución');
-            $table->char('inst-dep',1)->comment('dependencia: nacional(n), estadal (e), municipal (m), privado (p)');
+        Schema::create('fsjm_inst', function (Blueprint $table) {
+            $table->string('inst_cod',5)->primary()->comment('Codigo de la institución');
+            $table->string('inst_nom',50)->comment('Nombre de la institución');
+            $table->char('inst_dep',1)->comment('dependencia: nacional(n), estadal (e), municipal (m), privado (p)');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateTableFsjmInst extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjm-inst');
+        Schema::dropIfExists('fsjm_inst');
     }
 }

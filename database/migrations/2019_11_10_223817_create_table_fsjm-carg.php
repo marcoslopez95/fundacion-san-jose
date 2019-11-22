@@ -13,9 +13,9 @@ class CreateTableFsjmCarg extends Migration
      */
     public function up()
     {
-        Schema::create('fsjm-carg', function (Blueprint $table) {
-            $table->string('carg-cod',5)->primary()->comment('Codigo del cargo');
-            $table->string('carg-des',50)->comment('Descripcion del cargo');
+        Schema::create('fsjm_carg', function (Blueprint $table) {
+            $table->string('carg_cod',5)->primary()->comment('Codigo del cargo');
+            $table->string('carg_des',50)->comment('Descripcion del cargo');
             $table->timestamps();
             
         });
@@ -28,6 +28,6 @@ class CreateTableFsjmCarg extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjm-carg');
+        Schema::dropIfExists('fsjm_carg');
     }
 }

@@ -13,18 +13,18 @@ class CreateTableFsjMiem extends Migration
      */
     public function up()
     {
-        Schema::create('fsjm-miem', function (Blueprint $table) {
-            $table->string('miem-ced',8)->primary()->comment('Cedula del miembro');
-            $table->char('miem-no1',15)->comment('Primer nombre del miembro');
-            $table->char('miem-no2',15)->comment('Primer nombre del miembro');
-            $table->char('miem-no3',15)->comment('Primer nombre del miembro');
-            $table->char('miem-ap1',15)->comment('Primer nombre del miembro');
-            $table->char('miem-ap2',15)->comment('Primer nombre del miembro');
-            $table->integer('miem-eda',false,true)->comment('edad del miembro');
-            $table->date('miem-fna')->comment('Fecha de nacimiento del miembro');
-            $table->char('miem-sex',1)->comment('Sexo del miembro (F/M)');
-            $table->string('miem-tel',11)->comment('Telefono del miembro');
-            $table->string('miem-cse',5)->comment('Codigo del sector donde vive el miembro');
+        Schema::create('fsjm_miem', function (Blueprint $table) {
+            $table->string('miem_ced',8)->primary()->comment('Cedula del miembro');
+            $table->char('miem_no1',15)->comment('Primer nombre del miembro');
+            $table->char('miem_no2',15)->comment('Primer nombre del miembro');
+            $table->char('miem_no3',15)->comment('Primer nombre del miembro');
+            $table->char('miem_ap1',15)->comment('Primer nombre del miembro');
+            $table->char('miem_ap2',15)->comment('Primer nombre del miembro');
+            $table->integer('miem_eda',false,true)->comment('edad del miembro');
+            $table->date('miem_fna')->comment('Fecha de nacimiento del miembro');
+            $table->char('miem_sex',1)->comment('Sexo del miembro (F/M)');
+            $table->string('miem_tel',11)->comment('Telefono del miembro');
+            $table->string('miem_cse',5)->comment('Codigo del sector donde vive el miembro');
             $table->timestamps();
         });
     }
@@ -36,6 +36,6 @@ class CreateTableFsjMiem extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjm-miem');
+        Schema::dropIfExists('fsjm_miem');
     }
 }

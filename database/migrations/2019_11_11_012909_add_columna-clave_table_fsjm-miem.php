@@ -13,9 +13,9 @@ class AddColumnaClaveTableFsjmMiem extends Migration
      */
     public function up()
     {
-        Schema::table('fsjm-miem', function (Blueprint $table) {
+        Schema::table('fsjm_miem', function (Blueprint $table) {
             //
-            $table->string('miem-pass',10)->comment('Contraseña del miembro');
+            $table->string('miem_pss',10)->comment('Contraseña del miembro');
         });
     }
 
@@ -26,7 +26,7 @@ class AddColumnaClaveTableFsjmMiem extends Migration
      */
     public function down()
     {
-        Schema::table('fsjm-miem', function (Blueprint $table) {
+        Schema::table('fsjm_miem', function (Blueprint $table) {
             //
         });
     }

@@ -23,6 +23,7 @@ class Representante extends Model
         'repr-sex',
         'repr-tel',
         'repr-cse',
+        'repr-pss',
     ]; 
     public function pacientes(){
         return $this->hasMany('App\Model\Paciente','paci-rep','repr-ced');

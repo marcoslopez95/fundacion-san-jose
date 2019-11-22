@@ -13,10 +13,10 @@ class CreateTableFsjmSect extends Migration
      */
     public function up()
     {
-        Schema::create('fsjm-sect', function (Blueprint $table) {
+        Schema::create('fsjm_sect', function (Blueprint $table) {
             
-            $table->string('sect-cod', 5)->primary()->comment('Codigo del sector');
-            $table->string('sect-des', 50)->comment('descripción del sector');
+            $table->string('sect_cod', 5)->primary()->comment('Codigo del sector');
+            $table->string('sect_des', 50)->comment('descripción del sector');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateTableFsjmSect extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjm-sect');
+        Schema::dropIfExists('fsjm_sect');
     }
 }

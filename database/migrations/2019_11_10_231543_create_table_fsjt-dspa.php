@@ -13,12 +13,12 @@ class CreateTableFsjtDspa extends Migration
      */
     public function up()
     {
-        Schema::create('fsjt-dspa', function (Blueprint $table) {
-            $table->string('dspa-cdi',5)->comment('Codigo de la discapacidad');
-            $table->string('dspa-cpa',8)->comment('Cedula del paciente');
+        Schema::create('fsjt_dspa', function (Blueprint $table) {
+            $table->string('dspa_cdi',5)->comment('Codigo de la discapacidad');
+            $table->string('dspa_cpa',8)->comment('Cedula del paciente');
 
-            $table->foreign('dspa-cdi')->references('disc-cod')->on('fsjm-disc')->onDelete('cascade');
-            $table->foreign('dspa-cpa')->references('paci-ced')->on('fsjm-paci')->onDelete('cascade');
+            $table->foreign('dspa_cdi')->references('disc_cod')->on('fsjm_disc')->onDelete('cascade');
+            $table->foreign('dspa_cpa')->references('paci_ced')->on('fsjm_paci')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateTableFsjtDspa extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjt-dspa');
+        Schema::dropIfExists('fsjt_dspa');
     }
 }

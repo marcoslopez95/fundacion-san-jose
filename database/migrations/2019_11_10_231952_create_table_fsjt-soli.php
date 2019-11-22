@@ -13,14 +13,14 @@ class CreateTableFsjtSoli extends Migration
      */
     public function up()
     {
-        Schema::create('fsjt-soli', function (Blueprint $table) {
-            $table->string('soli-cre',8)->comment('cedula del representante');
-            $table->string('soli-cpa',8)->comment('cedula del paciente');
-            $table->string('soli-cod',5)->primary()->comment('Codigo de la solicitud');
-            $table->date('soli-fec')->comment('fecha de la solicitud');
+        Schema::create('fsjt_soli', function (Blueprint $table) {
+            $table->string('soli_cre',8)->comment('cedula del representante');
+            $table->string('soli_cpa',8)->comment('cedula del paciente');
+            $table->string('soli_cod',5)->primary()->comment('Codigo de la solicitud');
+            $table->date('soli_fec')->comment('fecha de la solicitud');
 
-            $table->foreign('soli-cre')->references('repr-ced')->on('fsjm-repr')->onDelete('cascade');
-            $table->foreign('soli-cpa')->references('paci-ced')->on('fsjm-paci')->onDelete('cascade');
+            $table->foreign('soli_cre')->references('repr_ced')->on('fsjm_repr')->onDelete('cascade');
+            $table->foreign('soli_cpa')->references('paci_ced')->on('fsjm_paci')->onDelete('cascade');
             
             $table->timestamps();
         });
@@ -33,6 +33,6 @@ class CreateTableFsjtSoli extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjt-soli');
+        Schema::dropIfExists('fsjt_soli');
     }
 }

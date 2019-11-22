@@ -13,12 +13,12 @@ class CreateTableFsjtAcdo extends Migration
      */
     public function up()
     {
-        Schema::create('fsjt-acdo', function (Blueprint $table) {
-            $table->string('acdo-cac',5)->comment('codigo de la actividad');
-            $table->string('acdo-cdo',5)->comment('codigo de la donacion entregada en la actividad');
+        Schema::create('fsjt_acdo', function (Blueprint $table) {
+            $table->string('acdo_cac',5)->comment('codigo de la actividad');
+            $table->string('acdo_cdo',5)->comment('codigo de la donacion entregada en la actividad');
 
-            $table->foreign('acdo-cac')->references('acti-cod')->on('fsjm-acti')->onDelete('cascade');
-            $table->foreign('acdo-cdo')->references('dona-cod')->on('fsjm-dona')->onDelete('cascade');
+            $table->foreign('acdo_cac')->references('acti_cod')->on('fsjm_acti')->onDelete('cascade');
+            $table->foreign('acdo_cdo')->references('dona_cod')->on('fsjm_dona')->onDelete('cascade');
             
             $table->timestamps();
         });
@@ -31,6 +31,6 @@ class CreateTableFsjtAcdo extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjt-acdo');
+        Schema::dropIfExists('fsjt_acdo');
     }
 }

@@ -13,11 +13,11 @@ class CreateTableFsjtMcar extends Migration
      */
     public function up()
     {
-        Schema::create('fsjt-mcar', function (Blueprint $table) {
-            $table->string('mcar-cca',5)->comment('codigo del cargo');
-            $table->string('mcar-cmi',8)->comment('Cedula del miembro');
-            $table->foreign('mcar-cca')->references('carg-cod')->on('fsjm-carg')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('mcar-cmi')->references('miem-ced')->on('fsjm-miem')->onDelete('cascade')->onUpdate('cascade');
+        Schema::create('fsjt_mcar', function (Blueprint $table) {
+            $table->string('mcar_cca',5)->comment('codigo del cargo');
+            $table->string('mcar_cmi',8)->comment('Cedula del miembro');
+            $table->foreign('mcar_cca')->references('carg_cod')->on('fsjm_carg')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('mcar_cmi')->references('miem_ced')->on('fsjm_miem')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTableFsjtMcar extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjt-mcar');
+        Schema::dropIfExists('fsjt_mcar');
     }
 }

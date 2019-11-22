@@ -13,11 +13,11 @@ class CreateTableFsjmDona extends Migration
      */
     public function up()
     {
-        Schema::create('fsjm-dona', function (Blueprint $table) {
-            $table->string('dona-cod',5)->primary()->comment('Código de la donación');
-            $table->string('dona-des',50)->comment('descripcion de la donacion');
-            $table->integer('dona-stk',false,true)->comment('stock de la donación');
-            $table->string('dona-prs',50)->comment('Presentación de la donación');
+        Schema::create('fsjm_dona', function (Blueprint $table) {
+            $table->string('dona_cod',5)->primary()->comment('Código de la donación');
+            $table->string('dona_des',50)->comment('descripcion de la donacion');
+            $table->integer('dona_stk',false,true)->comment('stock de la donación');
+            $table->string('dona_prs',50)->comment('Presentación de la donación');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTableFsjmDona extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjm-dona');
+        Schema::dropIfExists('fsjm_dona');
     }
 }

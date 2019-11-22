@@ -13,9 +13,9 @@ class CreateTableFsjmDisc extends Migration
      */
     public function up()
     {
-        Schema::create('fsjm-disc', function (Blueprint $table) {
-            $table->string('disc-cod', 5)->primary()->comment('Codigo de la discapacidad');
-            $table->string('disc-des', 50)->comment('descripción de la discapacidad');
+        Schema::create('fsjm_disc', function (Blueprint $table) {
+            $table->string('disc_cod', 5)->primary()->comment('Codigo de la discapacidad');
+            $table->string('disc_des', 50)->comment('descripción de la discapacidad');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateTableFsjmDisc extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fsjm-disc');
+        Schema::dropIfExists('fsjm_disc');
     }
 }
