@@ -25,5 +25,16 @@ class Paciente extends Model
         'paci-sex',
         'paci-tel',
     ];
-
+    public function discapacidads(){
+        return $this->belongsToMany('App\Model\Discapacidad','fsjt-dspa','dspa-cpa','dspa-cdi');
+    }
+    public function condicions(){
+        return $this->belongsToMany('App\Model\Condicion','fsjt-cdpa','cdpa-cpa','cdpa-ccd');
+    }
+    public function representantes(){
+        return $this->belongsTo('App\Model\Representante','repr-ced','paci-rep');
+    }
+    public function solicituds(){
+        return $this->hasMany('App\Model\Solicitud','soli-cpa','paci-ced');
+    }
 }

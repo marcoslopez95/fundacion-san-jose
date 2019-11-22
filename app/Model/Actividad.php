@@ -17,6 +17,9 @@ class Actividad extends Model
         'acti-fec',
     ];
     public function donacions(){
-        return $this->hasMany('App\Model\Donacion','dona-cod', 'acti-cod');
+        return $this->belongsToMany('App\Model\Donacion','fsjt-acdo','acdo-cac','acdo-cdo');
+    }
+    public function sectors(){
+        return $this->belongsToMany('App\Model\Sector','fsjt-acse','acse-cac','acse-cse');
     }
 }

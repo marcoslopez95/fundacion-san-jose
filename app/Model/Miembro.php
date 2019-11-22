@@ -25,6 +25,12 @@ class Miembro extends Model
         'miem-cse',
     ];
     public function cargos(){
-        return $this->hasOne('App\Model\Cargo','carg-cod','miem-ced');
+        return $this->belongsToMany('App\Model\Cargo','fsjt-mcar','mcar-cmi','mcar-cca');
+    }
+    public function visitasocials(){
+        return $this->belongsToMany('App\Model\VisitaSocial','fsjt-vsmi','vsmi-cmi','vsmi-cvs');
+    }
+    public function sectors(){
+        return $this->belongsTo('App\Model\Sector','sect-cod','miem-cse');
     }
 }

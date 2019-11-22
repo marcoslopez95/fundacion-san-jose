@@ -16,6 +16,6 @@ class Cargo extends Model
         'carg-des',
     ];
     public function miembros(){
-        return $this->belongsTo('App\Model\Miembro','miem-ced','carg-cod');
+        return $this->belongsToMany('App\Model\Miembro','fsjt-mcar','mcar-cca','mcar-cmi');
     }
 }

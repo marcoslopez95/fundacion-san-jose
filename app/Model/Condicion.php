@@ -15,4 +15,7 @@ class Condicion extends Model
         'cond-cod',
         'cond-des',
     ];
+    public function pacientes(){
+        return $this->belongsToMany('App\Model\Paciente','fsjt-cdpa','cdpa-ccd','cdpa-cpa');
+    }
 }

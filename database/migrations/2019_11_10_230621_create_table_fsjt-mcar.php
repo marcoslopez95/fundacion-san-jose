@@ -14,9 +14,9 @@ class CreateTableFsjtMcar extends Migration
     public function up()
     {
         Schema::create('fsjt-mcar', function (Blueprint $table) {
-            $table->string('mcar-ccar',5)->comment('codigo del cargo');
+            $table->string('mcar-cca',5)->comment('codigo del cargo');
             $table->string('mcar-cmi',8)->comment('Cedula del miembro');
-            $table->foreign('mcar-ccar')->references('carg-cod')->on('fsjm-carg')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('mcar-cca')->references('carg-cod')->on('fsjm-carg')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('mcar-cmi')->references('miem-ced')->on('fsjm-miem')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

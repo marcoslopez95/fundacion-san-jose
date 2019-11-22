@@ -17,7 +17,13 @@ class Donacion extends Model
         'dona-stk',
         'dona-prs',
     ];
-    public function donacions(){
-        return $this->belongsToMany('App\Model\Actividad');
+    public function actividads(){
+        return $this->belongsToMany('App\Model\Actividad','fsjt-acdo','acdo-cdo','acdo-cac');
+    }
+    public function institucions(){
+        return $this->belongsToMany('App\Model\Institucion','fsjt-indo','indo-cdo','indo-cin');
+    }
+    public function solicituds(){
+        return $this->belongsToMany('App\Model\Solicitud','fsjt-sodo','sodo-cdo','sodo-cso');
     }
 }

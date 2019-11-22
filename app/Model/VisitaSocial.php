@@ -16,4 +16,9 @@ class VisitaSocial extends Model
         'viso-apt',
         'viso-obs',
     ];
+
+    public function miembros()
+    {
+        return $this->belongsToMany('App\Model\Miembro','fsjt-vsmi','vsmi-cvs','vsmi-');
+    }
 }

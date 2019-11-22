@@ -15,4 +15,7 @@ class Discapacidad extends Model
         'disc-cod',
         'disc-des',
     ];
+    public function pacientes(){
+        return $this->belongsToMany('App\Model\Paciente','fsjt-dspa','dspa-cdi','dspa-cpa');
+    }
 }

@@ -24,4 +24,16 @@ class Representante extends Model
         'repr-tel',
         'repr-cse',
     ]; 
+    public function pacientes(){
+        return $this->hasMany('App\Model\Paciente','paci-rep','repr-ced');
+    }
+    public function solicituds(){
+        return $this->hasMany('App\Model\Solicitud','soli-cre','repr-ced');
+    }
+    public function sectors(){
+        return $this->belongsTo('App\Model\Sector','sect-cod','repr-cse');
+    }
+    public function visitasocials(){
+        return $this->belongsToMany('App\Model\VisitaSocial','fsjt-vsmi','vsmi-cre','vsmi-cvs');
+    }
 }
