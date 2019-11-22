@@ -23,6 +23,8 @@ Vue.component('ejemplo', require('./components/ExampleComponent.vue').default);
 Vue.component('Modal', require('./components/boton.vue').default);
 Vue.component('add-repr', require('./components/Modal-add-repr.vue').default);
 Vue.component('pesta', require('./components/pestaña.vue').default);
+Vue.component('TreeView', require('./components/TreeView.vue').default);
+Vue.component('TreeViewEditablePreview', require('./components/TreeViewEditablePreview.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

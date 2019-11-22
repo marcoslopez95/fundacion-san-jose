@@ -18,6 +18,9 @@
                    <ejemplo></ejemplo>
                    <pokemon></pokemon>
                    <addpokemon></addpokemon>
+
+                   <TreeView></TreeView>
+                   <TreeViewEditablePreview></TreeViewEditablePreview>
                 </p>
             </div>
         </div>  
