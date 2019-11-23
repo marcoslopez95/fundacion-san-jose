@@ -2,6 +2,7 @@
 
 use App\Model\Condicion;
 use App\Model\Discapacidad;
+use App\Model\Paciente;
 use Illuminate\Database\Seeder;
 
 class DisfuncionTableSeeder extends Seeder
@@ -15,18 +16,14 @@ class DisfuncionTableSeeder extends Seeder
     {
         //
         factory(Condicion::class,30)->create()->each(
-            function(Condicion $cond){
-                $cond->pacientes()->attach([
-                    
-                ]);
+            function($cond){
+                $cond->pacientes()->save(factory(Paciente::class)->make());
             });
 
         factory(Discapacidad::class,30)->create()->each(
-            function(Condicion $cond){
-                $cond->pacientes()->attach([
-                    
-                ]);
-            });;
+            function($cond){
+                $cond->pacientes()->save(factory(Paciente::class)->make());
+            });
         
     }
 }

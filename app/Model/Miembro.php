@@ -31,7 +31,7 @@ class Miembro extends Model
     public function visitasocials(){
         return $this->belongsToMany('App\Model\VisitaSocial','fsjt_vsmi','vsmi_cmi','vsmi_cvs');
     }
-    public function sectors(){
+    public function sector(){
         return $this->belongsTo('App\Model\Sector','sect_cod','miem_cse');
     }
 }

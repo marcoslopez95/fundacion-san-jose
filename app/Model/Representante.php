@@ -31,7 +31,7 @@ class Representante extends Model
     public function solicituds(){
         return $this->hasMany('App\Model\Solicitud','soli_cre','repr_ced');
     }
-    public function sectors(){
+    public function sector(){
         return $this->belongsTo('App\Model\Sector','sect_cod','repr_cse');
     }
     public function visitasocials(){

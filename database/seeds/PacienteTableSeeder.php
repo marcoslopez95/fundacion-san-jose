@@ -16,7 +16,7 @@ class PacienteTableSeeder extends Seeder
 
     
 
-        factory(Paciente::class,30)->create();
-        factory(Miembro::class,30)->create();
+        factory(Paciente::class,5)->create();
+        factory(Miembro::class,5)->create();
     }
 }

@@ -6,11 +6,10 @@ use App\Model\Condicion;
 use Faker\Generator as Faker;
 
 $factory->define(Condicion::class, function (Faker $faker) {
-    $cod = 'cd-';
 
     return [
         //
-        'cond_cod'=>  $cod . $faker ->rand(0,30),
+        'cond_cod'=> 'cd-'.$faker->unique()->numberBetween(0,99),
         'cond_des'=> $faker ->text(50),
     ];
 });
