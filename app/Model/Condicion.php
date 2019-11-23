@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Condicion extends Model
 {
     //
-    protected $table = 'fsjm-cond';
+    protected $table = 'fsjm_cond';
     public $incrementing = false;
-    protected $primaryKey = 'cond-cod';
+    protected $primaryKey = 'cond_cod';
     protected $keyType = 'string';
     protected $fillable = [
-        'cond-cod',
-        'cond-des',
+        'cond_cod',
+        'cond_des',
     ];
     public function pacientes(){
-        return $this->belongsToMany('App\Model\Paciente','fsjt-cdpa','cdpa-ccd','cdpa-cpa');
+        return $this->belongsToMany('App\Model\Paciente','fsjt_cdpa','cdpa_ccd','cdpa_cpa');
     }
 }

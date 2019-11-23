@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Discapacidad extends Model
 {
     //
-    protected $table = 'fsjm-disc';
-    protected $primaryKey = 'disc-cod';
+    protected $table = 'fsjm_disc';
+    protected $primaryKey = 'disc_cod';
     public $incrementing = false;
     protected $keyType = 'string';
     protected $fillable = [
-        'disc-cod',
-        'disc-des',
+        'disc_cod',
+        'disc_des',
     ];
     public function pacientes(){
-        return $this->belongsToMany('App\Model\Paciente','fsjt-dspa','dspa-cdi','dspa-cpa');
+        return $this->belongsToMany('App\Model\Paciente','fsjt_dspa','dspa_cdi','dspa_cpa');
     }
 }

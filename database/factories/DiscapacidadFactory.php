@@ -9,7 +9,7 @@ $factory->define(Discapacidad::class, function (Faker $faker) {
     $cod = 'dis-';
     return [
         //
-        'disc-cod'=> $cod + $faker ->rand(0,30),
-        'disc-des'=> $faker ->text(50),
+        'disc_cod'=> $cod . $faker ->rand(0,30),
+        'disc_des'=> $faker ->text(50),
     ];
 });

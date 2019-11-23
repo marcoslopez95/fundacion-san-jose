@@ -12,15 +12,15 @@ $factory->define(Paciente::class, function (Faker $faker) {
         'paci-rep'=> function () {
             return factory(Representante::class)->create()->repr_ced;
             },
-        'paci-ced'=> $faker ->lexify('????????'),
-        'paci-no1'=> $faker ->firstName, 
-        'paci-no2'=> $faker ->firstname, 
-        'paci-no3'=> $faker ->firstname, 
-        'paci-ap1'=> $faker ->lastName, 
-        'paci-ap2'=> $faker ->lastName, 
-        'paci-eda'=> $faker ->numberBetween(1,70), 
-        'paci-fna'=> $faker ->date(), 
-        'paci-sex'=> $faker ->randomElement(array('m','f')),
-        'paci-tel'=> $faker ->lexify('???????????'), 
+        'paci_ced'=> $faker ->lexify('????????'),
+        'paci_no1'=> $faker ->firstName, 
+        'paci_no2'=> $faker ->firstname, 
+        'paci_no3'=> $faker ->firstname, 
+        'paci_ap1'=> $faker ->lastName, 
+        'paci_ap2'=> $faker ->lastName, 
+        'paci_eda'=> $faker ->numberBetween(1,70), 
+        'paci_fna'=> $faker ->date(), 
+        'paci_sex'=> $faker ->randomElement(array('m','f')),
+        'paci_tel'=> $faker ->lexify('???????????'), 
     ];
 });

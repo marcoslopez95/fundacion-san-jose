@@ -10,7 +10,7 @@ $factory->define(Cargo::class, function (Faker $faker) {
 
     return [
         //
-        'carg-cod'=> $cod + $faker ->rand(0,30),
-        'carg-des'=> $faker ->text(50),
+        'carg_cod'=> $cod . $faker ->rand(0,30),
+        'carg_des'=> $faker ->text(50),
     ];
 });

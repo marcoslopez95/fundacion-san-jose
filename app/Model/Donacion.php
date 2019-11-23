@@ -7,23 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 class Donacion extends Model
 {
     //
-    protected $table = 'fsjm-dona';
-    protected $primaryKey = 'dona-cod';
+    protected $table = 'fsjm_dona';
+    protected $primaryKey = 'dona_cod';
     public $incrementing = false;
     protected $keyType = 'string';
     protected $fillable = [
-        'dona-cod',
-        'dona-des',
-        'dona-stk',
-        'dona-prs',
+        'dona_cod',
+        'dona_des',
+        'dona_stk',
+        'dona_prs',
     ];
     public function actividads(){
-        return $this->belongsToMany('App\Model\Actividad','fsjt-acdo','acdo-cdo','acdo-cac');
+        return $this->belongsToMany('App\Model\Actividad','fsjt_acdo','acdo_cdo','acdo_cac');
     }
     public function institucions(){
-        return $this->belongsToMany('App\Model\Institucion','fsjt-indo','indo-cdo','indo-cin');
+        return $this->belongsToMany('App\Model\Institucion','fsjt_indo','indo_cdo','indo_cin');
     }
     public function solicituds(){
-        return $this->belongsToMany('App\Model\Solicitud','fsjt-sodo','sodo-cdo','sodo-cso');
+        return $this->belongsToMany('App\Model\Solicitud','fsjt_sodo','sodo_cdo','sodo_cso');
     }
 }

@@ -7,18 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class VisitaSocial extends Model
 {
     //
-    protected $table = 'fsjm-viso';
-    protected $primaryKey = 'viso-cod';
+    protected $table = 'fsjm_viso';
+    protected $primaryKey = 'viso_cod';
     public $incrementing = false;
     protected $keyType = 'string';
     protected $fillable = [
-        'viso-cod',
-        'viso-apt',
-        'viso-obs',
+        'viso_cod',
+        'viso_apt',
+        'viso_obs',
     ];
 
     public function miembros()
     {
-        return $this->belongsToMany('App\Model\Miembro','fsjt-vsmi','vsmi-cvs','vsmi-cmi');
+        return $this->belongsToMany('App\Model\Miembro','fsjt_vsmi','vsmi_cvs','vsmi_cmi');
     }
 }

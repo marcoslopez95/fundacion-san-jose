@@ -9,8 +9,8 @@ $factory->define(Institucion::class, function (Faker $faker) {
     $cod = 'ins-';
     return [
         //
-        'inst-cod'=> $cod + $faker ->rand(0,30),
-        'inst-nom'=> $faker ->company,
-        'inst-dep'=> $faker ->randomElement(array('n','e','m','p')),
+        'inst_cod'=> $cod . $faker ->rand(0,30),
+        'inst_nom'=> $faker ->company,
+        'inst_dep'=> $faker ->randomElement(array('n','e','m','p')),
     ];
 });

@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Cargo extends Model
 {
     //
-    protected $table = 'fsjm-carg';
-    protected $primaryKey = 'carg-cod';
+    protected $table = 'fsjm_carg';
+    protected $primaryKey = 'carg_cod';
     public $incrementing = false;
     protected $keyType = 'string';
     protected $fillable = [
-        'carg-cod',
-        'carg-des',
+        'carg_cod',
+        'carg_des',
     ];
     public function miembros(){
-        return $this->belongsToMany('App\Model\Miembro','fsjt-mcar','mcar-cca','mcar-cmi');
+        return $this->belongsToMany('App\Model\Miembro','fsjt_mcar','mcar_cca','mcar_cmi');
     }
 }

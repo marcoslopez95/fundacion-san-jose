@@ -11,7 +11,7 @@ $factory->define(Sector::class, function (Faker $faker) {
     $cod= $cod . "$t";
     return [
         //
-        'sect-cod'=> $cod,
-        'sect-des'=> $faker ->text(50),
+        'sect_cod'=> $cod,
+        'sect_des'=> $faker ->text(50),
     ];
 });

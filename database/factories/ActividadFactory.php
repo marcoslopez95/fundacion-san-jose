@@ -9,8 +9,8 @@ $factory->define(Actividad::class, function (Faker $faker) {
     $cod = 'acti-';
     return [
         //
-        'acti-cod'=> $cod + $faker ->rand(0,30),
-        'acti-des'=> $faker ->text(50),
-        'acti-fec'=> $faker ->date(),
+        'acti_cod'=> $cod . $faker ->rand(0,30),
+        'acti_des'=> $faker ->text(50),
+        'acti_fec'=> $faker ->date(),
     ];
 });

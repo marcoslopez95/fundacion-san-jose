@@ -7,34 +7,34 @@ use Illuminate\Database\Eloquent\Model;
 class Representante extends Model
 {
     //
-    protected $table = 'fsjm-repr';
+    protected $table = 'fsjm_repr';
     public $incrementing = false;
-    protected $primaryKey = 'repr-ced';
+    protected $primaryKey = 'repr_ced';
     protected $keyType = 'string';
     protected $fillable = [
-        'repr-ced',
-        'repr-no1',
-        'repr-no2',
-        'repr-no3',
-        'repr-ap1',
-        'repr-ap2',
-        'repr-eda',
-        'repr-fna',
-        'repr-sex',
-        'repr-tel',
-        'repr-cse',
-        'repr-pss',
+        'repr_ced',
+        'repr_no1',
+        'repr_no2',
+        'repr_no3',
+        'repr_ap1',
+        'repr_ap2',
+        'repr_eda',
+        'repr_fna',
+        'repr_sex',
+        'repr_tel',
+        'repr_cse',
+        'repr_pss',
     ]; 
     public function pacientes(){
-        return $this->hasMany('App\Model\Paciente','paci-rep','repr-ced');
+        return $this->hasMany('App\Model\Paciente','paci_rep','repr_ced');
     }
     public function solicituds(){
-        return $this->hasMany('App\Model\Solicitud','soli-cre','repr-ced');
+        return $this->hasMany('App\Model\Solicitud','soli_cre','repr_ced');
     }
     public function sectors(){
-        return $this->belongsTo('App\Model\Sector','sect-cod','repr-cse');
+        return $this->belongsTo('App\Model\Sector','sect_cod','repr_cse');
     }
     public function visitasocials(){
-        return $this->belongsToMany('App\Model\VisitaSocial','fsjt-vsmi','vsmi-cre','vsmi-cvs');
+        return $this->belongsToMany('App\Model\VisitaSocial','fsjt_vsmi','vsmi_cre','vsmi_cvs');
     }
 }

@@ -9,8 +9,8 @@ $factory->define(VisitaSocial::class, function (Faker $faker) {
     $cod = 'viso-';
     return [
         //
-        'viso-cod'=> $cod + $faker ->rand(0,30),
-        'viso-apt'=> $faker ->randomElement(array('s','n')),
-        'viso-obs'=> $faker ->text(50),
+        'viso_cod'=> $cod . $faker ->rand(0,30),
+        'viso_apt'=> $faker ->randomElement(array('s','n')),
+        'viso_obs'=> $faker ->text(50),
     ];
 });

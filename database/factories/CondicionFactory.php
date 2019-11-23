@@ -10,7 +10,7 @@ $factory->define(Condicion::class, function (Faker $faker) {
 
     return [
         //
-        'cond-cod'=>  $cod + $faker ->rand(0,30),
-        'cond-des'=> $faker ->text(50),
+        'cond_cod'=>  $cod . $faker ->rand(0,30),
+        'cond_des'=> $faker ->text(50),
     ];
 });

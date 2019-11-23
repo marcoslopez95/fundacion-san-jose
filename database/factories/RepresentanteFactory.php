@@ -9,18 +9,19 @@ use Faker\Generator as Faker;
 $factory->define(Representante::class, function (Faker $faker) {
     return [
         //
-        'repr-ced'=> $faker ->lexify('?????'),
-        'repr-no1'=> $faker ->firstName(),
-        'repr-no2'=> $faker ->firstName(),
-        'repr-no3'=> $faker ->firstName(),
-        'repr-ap1'=> $faker ->lastName,
-        'repr-ap2'=> $faker ->lastName,
-        'repr-eda'=> $faker ->numberBetween(1,70),
-        'repr-fna'=> $faker ->date(),
-        'repr-sex'=> $faker ->randomElement(array('m','f')),
-        'repr-tel'=> $faker ->lexify('???????????'),
-        'repr-cse'=> function () {
+        'repr_ced'=> $faker ->lexify('?????'),
+        'repr_no1'=> $faker ->firstName(),
+        'repr_no2'=> $faker ->firstName(),
+        'repr_no3'=> $faker ->firstName(),
+        'repr_ap1'=> $faker ->lastName,
+        'repr_ap2'=> $faker ->lastName,
+        'repr_eda'=> $faker ->numberBetween(1,70),
+        'repr_fna'=> $faker ->date(),
+        'repr_sex'=> $faker ->randomElement(array('m','f')),
+        'repr_tel'=> $faker ->lexify('???????????'),
+        'repr_cse'=> function () {
             return factory(Sector::class)->create()->sect_cod;
             },
+        'repr_pss' => bcrypt('hola'),
     ];
 });

@@ -9,9 +9,9 @@ $factory->define(Donacion::class, function (Faker $faker) {
     $cod = 'dona-';
     return [
         //
-        'dona-cod'=> $cod + $faker ->rand(0,30),
-        'dona-des'=> $faker ->text(50),
-        'dona-stk'=> $faker ->numberBetween(0,100),
-        'dona-prs'=> $faker ->text(50),
+        'dona_cod'=> $cod . $faker ->rand(0,30),
+        'dona_des'=> $faker ->text(50),
+        'dona_stk'=> $faker ->numberBetween(0,100),
+        'dona_prs'=> $faker ->text(50),
     ];
 });
