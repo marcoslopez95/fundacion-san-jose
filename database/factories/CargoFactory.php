@@ -6,7 +6,7 @@ use App\Model\Cargo;
 use Faker\Generator as Faker;
 
 $factory->define(Cargo::class, function (Faker $faker) {
-    $cod = 'carg-';
+    $cod = 'cg-';
 
     return [
         //

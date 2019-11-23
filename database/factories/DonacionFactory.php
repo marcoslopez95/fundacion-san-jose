@@ -6,7 +6,7 @@ use App\Model\Donacion;
 use Faker\Generator as Faker;
 
 $factory->define(Donacion::class, function (Faker $faker) {
-    $cod = 'dona-';
+    $cod = 'dn-';
     return [
         //
         'dona_cod'=> $cod . $faker ->rand(0,30),

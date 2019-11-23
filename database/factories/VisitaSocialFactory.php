@@ -6,7 +6,7 @@ use App\Model\VisitaSocial;
 use Faker\Generator as Faker;
 
 $factory->define(VisitaSocial::class, function (Faker $faker) {
-    $cod = 'viso-';
+    $cod = 'vs-';
     return [
         //
         'viso_cod'=> $cod . $faker ->rand(0,30),

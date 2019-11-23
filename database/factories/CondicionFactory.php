@@ -6,7 +6,7 @@ use App\Model\Condicion;
 use Faker\Generator as Faker;
 
 $factory->define(Condicion::class, function (Faker $faker) {
-    $cod = 'cond-';
+    $cod = 'cd-';
 
     return [
         //

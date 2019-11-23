@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Model\Paciente;
+use App\Model\Miembro;
 class PacienteTableSeeder extends Seeder
 {
     /**

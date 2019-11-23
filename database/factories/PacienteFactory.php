@@ -9,7 +9,7 @@ use Faker\Generator as Faker;
 $factory->define(Paciente::class, function (Faker $faker) {
     return [
         //
-        'paci-rep'=> function () {
+        'paci_rep'=> function () {
             return factory(Representante::class)->create()->repr_ced;
             },
         'paci_ced'=> $faker ->lexify('????????'),

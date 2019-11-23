@@ -3,12 +3,13 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Model\Miembro;
+use App\Model\Sector;
 use Faker\Generator as Faker;
 
 $factory->define(Miembro::class, function (Faker $faker) {
     return [
         //
-        'miem_ced'=> $faker ->lexify('????????')->unique(),
+        'miem_ced'=> $faker->unique() ->lexify('????????'),
         'miem_no1'=> $faker ->firstName,
         'miem_no2'=> $faker ->firstname,
         'miem_no3'=> $faker ->firstname,
@@ -19,8 +20,8 @@ $factory->define(Miembro::class, function (Faker $faker) {
         'miem_sex'=> $faker ->randomElement(array('m','f')),
         'miem_tel'=> $faker ->lexify('???????????'),
         'miem_cse'=> function () {
-            return factory(App\Sector::class)->create()->sect_cod;
+            return factory(Sector::class)->create()->sect_cod;
             },
-        'miem_pss' => bcrypt('hola'),
+        'miem_pss' => 'hola',
     ];
 });

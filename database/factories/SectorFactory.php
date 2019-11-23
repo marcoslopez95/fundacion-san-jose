@@ -6,12 +6,11 @@ use App\Model\Sector;
 use Faker\Generator as Faker;
 
 $factory->define(Sector::class, function (Faker $faker) {
-    $cod = 'sect-';
-    $t = $faker -> randomElement(array('1','2','3'));
-    $cod= $cod . "$t";
+    $cod = 'sc-';
+    
     return [
         //
-        'sect_cod'=> $cod,
-        'sect_des'=> $faker ->text(50),
+        'sect_cod'=> $faker->unique()->lexify('?????'),
+        'sect_des'=> $faker->text(50),
     ];
 });

@@ -6,7 +6,7 @@ use App\Model\Institucion;
 use Faker\Generator as Faker;
 
 $factory->define(Institucion::class, function (Faker $faker) {
-    $cod = 'ins-';
+    $cod = 'in-';
     return [
         //
         'inst_cod'=> $cod . $faker ->rand(0,30),

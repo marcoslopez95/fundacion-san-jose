@@ -6,7 +6,7 @@ use App\Model\Actividad;
 use Faker\Generator as Faker;
 
 $factory->define(Actividad::class, function (Faker $faker) {
-    $cod = 'acti-';
+    $cod = 'ac-';
     return [
         //
         'acti_cod'=> $cod . $faker ->rand(0,30),
