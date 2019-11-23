@@ -3,6 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Model\Representante;
+use App\Model\Sector;
 use Faker\Generator as Faker;
 
 $factory->define(Representante::class, function (Faker $faker) {
@@ -18,6 +19,8 @@ $factory->define(Representante::class, function (Faker $faker) {
         'repr-fna'=> $faker ->date(),
         'repr-sex'=> $faker ->randomElement(array('m','f')),
         'repr-tel'=> $faker ->lexify('???????????'),
-        'repr-cse'=> $faker ->lexify('?????'),
+        'repr-cse'=> function () {
+            return factory(Sector::class)->create()->sect_cod;
+            },
     ];
 });

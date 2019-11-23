@@ -14,5 +14,6 @@ class RepresentanteTableSeeder extends Seeder
     {
         //
         factory(Representante::class,14)->create();
+        factory(Donacion::class,15)->create();
     }
 }

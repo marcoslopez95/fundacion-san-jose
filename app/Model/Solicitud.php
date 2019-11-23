@@ -9,7 +9,7 @@ class Solicitud extends Model
     //
     protected $table = 'fsjm-soli';
     protected $primaryKey = 'soli-cod';
-    protected $incrementing = false;
+    public $incrementing = false;
     protected $keyType = 'string';
     protected $fillable = [
         'soli-cre',

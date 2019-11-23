@@ -9,7 +9,7 @@ class Miembro extends Model
     //
     protected $table = 'fsjm-miem';
     protected $primaryKey = 'miem-ced';
-    protected $incrementing = false;
+    public $incrementing = false;
     protected $keyType = 'string';
     protected $fillable = [
         'miem-ced',

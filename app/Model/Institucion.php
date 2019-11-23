@@ -10,7 +10,7 @@ class Institucion extends Model
     protected $table = 'fsjm-inst';
     protected $primaryKey = 'inst-cod';
     protected $keyType = 'string';
-    protected $incrementing = false;
+    public $incrementing = false;
     protected $fillable = [
         'inst-cod',
         'inst-des',

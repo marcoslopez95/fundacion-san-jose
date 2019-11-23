@@ -18,6 +18,8 @@ $factory->define(Miembro::class, function (Faker $faker) {
         'miem-fna'=> $faker ->date(),
         'miem-sex'=> $faker ->randomElement(array('m','f')),
         'miem-tel'=> $faker ->lexify('???????????'),
-        'miem-cse'=> $faker ->lexify('?????'),
+        'miem-cse'=> function () {
+            return factory(App\Sector::class)->create()->sect_cod;
+            },
     ];
 });

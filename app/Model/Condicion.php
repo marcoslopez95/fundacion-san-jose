@@ -8,7 +8,7 @@ class Condicion extends Model
 {
     //
     protected $table = 'fsjm-cond';
-    protected $incrementing = false;
+    public $incrementing = false;
     protected $primaryKey = 'cond-cod';
     protected $keyType = 'string';
     protected $fillable = [

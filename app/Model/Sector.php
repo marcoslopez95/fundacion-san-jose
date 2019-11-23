@@ -10,7 +10,7 @@ class Sector extends Model
     protected $table = 'fsjm-sect';
     protected $primaryKey = 'sect-cod';
     protected $keyType = 'string';
-    protected $incrementing = false;
+    public $incrementing = false;
     protected $fillable = [
         'sect-cod',
         'sect-des',

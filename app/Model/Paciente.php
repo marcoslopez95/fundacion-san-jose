@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Paciente extends Model
 {
     //
+    public $incrementing = false;
     protected $table = 'fsjm-paci';
     protected $primaryKey = 'paci-ced';
-    protected $incrementing = false;
+    
     protected $keyType = 'string';
     protected $fillable = [
         'paci-rep',
@@ -31,7 +32,7 @@ class Paciente extends Model
     public function condicions(){
         return $this->belongsToMany('App\Model\Condicion','fsjt-cdpa','cdpa-cpa','cdpa-ccd');
     }
-    public function representantes(){
+    public function representante(){
         return $this->belongsTo('App\Model\Representante','repr-ced','paci-rep');
     }
     public function solicituds(){

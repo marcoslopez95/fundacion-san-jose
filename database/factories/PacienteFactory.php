@@ -3,12 +3,15 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Model\Paciente;
+use App\Model\Representante;
 use Faker\Generator as Faker;
 
 $factory->define(Paciente::class, function (Faker $faker) {
     return [
         //
-        'paci-rep'=> $faker ->numberBetween(0,30), 
+        'paci-rep'=> function () {
+            return factory(Representante::class)->create()->repr_ced;
+            },
         'paci-ced'=> $faker ->lexify('????????'),
         'paci-no1'=> $faker ->firstName, 
         'paci-no2'=> $faker ->firstname, 

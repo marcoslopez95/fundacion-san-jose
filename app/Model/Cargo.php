@@ -9,7 +9,7 @@ class Cargo extends Model
     //
     protected $table = 'fsjm-carg';
     protected $primaryKey = 'carg-cod';
-    protected $incrementing = false;
+    public $incrementing = false;
     protected $keyType = 'string';
     protected $fillable = [
         'carg-cod',

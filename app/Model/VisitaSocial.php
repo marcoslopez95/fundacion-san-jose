@@ -9,7 +9,7 @@ class VisitaSocial extends Model
     //
     protected $table = 'fsjm-viso';
     protected $primaryKey = 'viso-cod';
-    protected $incrementing = false;
+    public $incrementing = false;
     protected $keyType = 'string';
     protected $fillable = [
         'viso-cod',

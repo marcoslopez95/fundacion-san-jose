@@ -8,7 +8,7 @@ class Representante extends Model
 {
     //
     protected $table = 'fsjm-repr';
-    protected $incrementing = false;
+    public $incrementing = false;
     protected $primaryKey = 'repr-ced';
     protected $keyType = 'string';
     protected $fillable = [
