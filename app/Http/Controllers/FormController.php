@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Discapacidad;
 use Illuminate\Http\Request;
 
 use App\Model\Representante;
@@ -20,7 +21,7 @@ class FormController extends Controller
         return view('formularios.Registro.disfuncion');
     }
 
-    public function guardar_disfuncion(Request $request, Discapacidad $discapacidad)
+    public function guardar_condicion(Request $request, Discapacidad $discapacidad)
     {
         //
         dd($discapacidad->all());
@@ -59,7 +60,7 @@ class FormController extends Controller
         $representante->repr_pss = "hola";
         $representante->repr_cse = "pghzz";
         $representante->save();
-        return redirecto()->route('registro-d');
+        return redirect()->route('inicio_sesion');
         
     
         // return redirect()->route('trainers.index');
@@ -71,9 +72,12 @@ class FormController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function guardar_discapacidad()
     {
         //
+        $discapacidad = Discapacidad::all();
+        return view('principal.usuario.Discapacidad',compact('discapacidad'));
+        
     }
 
     /**
@@ -82,9 +86,22 @@ class FormController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function actualizar_cond_pac(Request $request, Discapacidad $discapacidad)
     {
         //
+        return $request->all();
+        // $trainer->fill($request->except('avatar'));
+        // if ($request->hasFile('avatar')) {
+        //     $file = $request->file('avatar');
+        //     $nombre_archi = time().$file->getClientOriginalName();
+        //     $trainer->avatar = $nombre_archi;
+        //     $file->move(public_path().'/images/trainers/',$nombre_archi);
+        // }
+        // $nombre_entrenador=$request->input('nombre');
+        // $slug2 = strtr($nombre_entrenador,' ','-');
+        // $trainer->slug = $slug2 . "-trainer";
+        // $trainer->save();
+        // return redirect()->route('trainers.show',[$trainer])->with('status','Entrenador actualizado correctamente');
     }
 
     /**

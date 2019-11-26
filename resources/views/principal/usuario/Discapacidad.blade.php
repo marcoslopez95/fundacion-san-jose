@@ -42,7 +42,7 @@
             <prueba></prueba>
             Debes rellenar el siguiente formulario
 
-            
+            @include('formularios.Registro.disfuncion')
 
             {{-- <component v-bind:is="ejemplo"></component>
             <component v-bind:is="ejemplo"></component> --}}

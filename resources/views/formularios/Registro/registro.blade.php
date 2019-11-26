@@ -30,8 +30,9 @@
         <div class="row">
         <div class="col-sm-12">
          <h4> Datos Personales</h4>
+         @include('errors')
         </div>
-    
+        
         <div class="col-sm-6 container row">
                 <div class="col-sm">
                         <input type="text" name="cedula" placeholder="cedula" class="form-control" id="">
