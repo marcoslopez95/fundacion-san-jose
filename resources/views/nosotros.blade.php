@@ -5,6 +5,7 @@
 @endsection
 
 @section('contenido')
+
 <div class="separador"></div>
     <div class="container">
         <div class="card">

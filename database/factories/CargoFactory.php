@@ -10,7 +10,7 @@ $factory->define(Cargo::class, function (Faker $faker) {
 
     return [
         //
-        'carg_cod'=> $cod . $faker ->rand(0,30),
+        'carg_cod'=> $cod . $faker ->unique()->numberBetween(0,99),
         'carg_des'=> $faker ->text(50),
     ];
 });

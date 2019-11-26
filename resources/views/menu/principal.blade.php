@@ -11,10 +11,10 @@
     <div class="navbar-collapse collapse show" id="collapsibleNavbar" style="">
         <ul class="navbar-nav col-sm my-auto">
             <li class="nav-item">
-                <a class="nav-link col-sm-2" href="#">Actividades</a>
+                <a class="nav-link col-sm-2" @if ($ac="ac") class="active" @endif href="#">Actividades</a>
             </li>
             <li class="nav-item col-sm-3">
-                <a class="nav-link active" href="{{route('nosotros')}}">¿Quienes Somos?</a>
+            <a class="nav-link" @if ($ac="we") class="active" @endif href="{{route('nosotros')}}">¿Quienes Somos?</a>
             </li>
             
         

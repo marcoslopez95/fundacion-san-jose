@@ -6,13 +6,16 @@ use App\Model\Miembro;
 use App\Model\Sector;
 use Faker\Generator as Faker;
 
+
 $factory->define(Miembro::class, function (Faker $faker) {
     $u = function(){
         // $pokemons = Pokemon::all();
-        $a = Sector::all();
-        return response()->json($a,200);
+        $a = Sector::all()->pluck('sect_cod');
+        $j = $a->random();
+        return $j;
     };
-    $j = json_decode($u->sect_cod);
+
+    
     return [
         //
         'miem_ced'=> $faker->unique() ->lexify('????????'),
@@ -25,7 +28,7 @@ $factory->define(Miembro::class, function (Faker $faker) {
         'miem_fna'=> $faker->date(),
         'miem_sex'=> $faker->randomElement(array('m','f')),
         'miem_tel'=> $faker->lexify('???????????'),
-        'miem_cse'=> $faker->randomElement(array ($u)),
+        'miem_cse'=> $u,
         'miem_pss' => 'hola',
     ];
 });

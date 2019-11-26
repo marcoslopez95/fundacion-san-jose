@@ -9,7 +9,7 @@ $factory->define(Donacion::class, function (Faker $faker) {
     $cod = 'dn-';
     return [
         //
-        'dona_cod'=> $cod . $faker ->rand(0,30),
+        'dona_cod'=> $cod . $faker ->unique()->numberBetween(0,99),
         'dona_des'=> $faker ->text(50),
         'dona_stk'=> $faker ->numberBetween(0,100),
         'dona_prs'=> $faker ->text(50),

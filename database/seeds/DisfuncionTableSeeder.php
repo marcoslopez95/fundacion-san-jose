@@ -15,15 +15,9 @@ class DisfuncionTableSeeder extends Seeder
     public function run()
     {
         //
-        factory(Condicion::class,30)->create()->each(
-            function($cond){
-                $cond->pacientes()->save(factory(Paciente::class)->make());
-            });
+        factory(Condicion::class,5)->create();
 
-        factory(Discapacidad::class,30)->create()->each(
-            function($cond){
-                $cond->pacientes()->save(factory(Paciente::class)->make());
-            });
+        factory(Discapacidad::class,5)->create();
         
     }
 }
