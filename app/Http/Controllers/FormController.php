@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-Use App\Model\Paciente;
-use App\Model\Discapacidad;
+
+use App\Model\Representante;
+use Carbon\Carbon;
+
 class FormController extends Controller
 {
     /**
@@ -31,40 +33,35 @@ class FormController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function guardar_user(Request $request){
-        $prueba=false;
-        
-        if(!$prueba){
-            $datos_validados = $request->validate([
-            'cedula'=>'required|max:8',
-            'dni'=>'required|image',
-            'foto-user'=>'required|image',
-            'nombre1'=>'required|max:15',
-            'nombre2'=>'max:15',
-            'apellido1'=>'required|max:15',
-            'apellido2'=>'max:15',
-            'gen'=>'required',
-            'fecha-nacimiento'=>'required',
-            'tel'=>'required|max:11',
-            'correo'=>'required|email',
-            'gsp'=>'required',
-            'sector'=>'required',
-            'rep'=>'required'
 
+        $validar = $request ->validate([
+            'cedula'=>'max:8',
+            'nombre1'=>'max:15',
+            'nombre2'=>'max:15',
+            'apellido1'=>'max:15',
+            'apellido2'=>'max:15',
         ]);
-         
-        // if ($request->hasFile('avatar')) {
-        //     $file = $request->file('avatar');
-        //     $nombre_archi = time().$file->getClientOriginalName();
-        //     $file->move(public_path().'/images/trainers/',$nombre_archi);
-        // }
+
+        $fecha_nacimiento = $request->input('fecha-nacimiento');
+        $edad = Carbon::parse($fecha_nacimiento)->age;
         
+        $representante = new Representante();
+        $representante->repr_ced = $request->input('cedula');
+        $representante->repr_no1 = $request->input('nombre1');
+        $representante->repr_no2 = $request->input('nombre2');
+        $representante->repr_ap1 = $request->input('apellido1');
+        $representante->repr_ap2 = $request->input('apellido2');
+        $representante->repr_sex = $request->input('gen');
+        $representante->repr_fna = $fecha_nacimiento;
+        $representante->repr_eda = $edad;
         
-        $paciente = new Paciente();
-        $paciente->paci_ced = $request->input('ced');
-        $paciente->paci_no1 = $request->input('nombre1');
-        $paciente->save();
-        };
-        return redirect()->route('registro-d');
+        $representante->repr_tel = $request->input('tel');
+        $representante->repr_pss = "hola";
+        $representante->repr_cse = "pghzz";
+        $representante->save();
+        return redirecto()->route('registro-d');
+        
+    
         // return redirect()->route('trainers.index');
     }
 

@@ -17,7 +17,7 @@ class CreateTableFsjMiem extends Migration
             $table->string('miem_ced',8)->primary()->comment('Cedula del miembro');
             $table->char('miem_no1',15)->comment('Primer nombre del miembro');
             $table->char('miem_no2',15)->comment('Primer nombre del miembro');
-            $table->char('miem_no3',15)->comment('Primer nombre del miembro');
+            $table->char('miem_no3',15)->nullable()->comment('Primer nombre del miembro');
             $table->char('miem_ap1',15)->comment('Primer nombre del miembro');
             $table->char('miem_ap2',15)->comment('Primer nombre del miembro');
             $table->integer('miem_eda',false,true)->comment('edad del miembro');

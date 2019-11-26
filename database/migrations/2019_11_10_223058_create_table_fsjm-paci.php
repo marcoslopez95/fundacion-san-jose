@@ -18,7 +18,7 @@ class CreateTableFsjmPaci extends Migration
             $table->string('paci_ced',8)->primary()->comment('Cedula del paciente');
             $table->char('paci_no1',15)->comment('Primer nombre del paciente');
             $table->char('paci_no2',15)->comment('Primer nombre del paciente');
-            $table->char('paci_no3',15)->comment('Primer nombre del paciente');
+            $table->char('paci_no3',15)->nullable()->comment('Primer nombre del paciente');
             $table->char('paci_ap1',15)->comment('Primer nombre del paciente');
             $table->char('paci_ap2',15)->comment('Primer nombre del paciente');
             $table->integer('paci_eda',false,true)->comment('edad del paciente');

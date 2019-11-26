@@ -17,7 +17,7 @@ class CreateTableFsjmRepr extends Migration
             $table->string('repr_ced',8)->primary()->comment('Cedula del representante');
             $table->char('repr_no1',15)->comment('Primer nombre del representante');
             $table->char('repr_no2',15)->comment('Primer nombre del representante');
-            $table->char('repr_no3',15)->comment('Primer nombre del representante');
+            $table->char('repr_no3',15)->nullable()->comment('Primer nombre del representante');
             $table->char('repr_ap1',15)->comment('Primer nombre del representante');
             $table->char('repr_ap2',15)->comment('Primer nombre del representante');
             $table->integer('repr_eda',false,true)->comment('edad del representante');
