@@ -15,6 +15,7 @@ class Cargo extends Model
         'carg_cod',
         'carg_des',
     ];
+    
     public function miembros(){
         return $this->belongsToMany('App\Model\Miembro','fsjt_mcar','mcar_cca','mcar_cmi');
     }
