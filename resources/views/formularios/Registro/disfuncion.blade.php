@@ -1,5 +1,6 @@
 @extends('principal.estructura')
 
+
 @section('titulo')
     Registro -
 @endsection

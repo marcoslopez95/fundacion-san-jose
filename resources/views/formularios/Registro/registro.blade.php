@@ -73,12 +73,13 @@
             <div class="col-sm-6">
                 <label for="">Telefono</label>
                 <input name="tel" type="tel" name="tel" class="form-control">
+            
+                
             </div>
             <div class="col-sm-6">
                 <label for="">Correo Electrónico</label>
                 <input name="correo" type="email" name="email" class="form-control">
             </div>
-        
         
             <div class="col-sm-6">
                 <label for="">Ubicación GPS</label>
