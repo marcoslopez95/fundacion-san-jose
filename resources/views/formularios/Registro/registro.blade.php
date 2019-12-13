@@ -64,13 +64,12 @@
         
     </div>
     
-    
+
     <div class="container row" style="padding-top:15px;">
         
         <div class="col-sm-12 border border-bottom-0 border-left-0 border-right-0">
             <h4>Contacto</h4>
         </div>
-        
             <div class="col-sm-6">
                 <label for="">Telefono</label>
                 <input name="tel" type="tel" name="tel" class="form-control">
