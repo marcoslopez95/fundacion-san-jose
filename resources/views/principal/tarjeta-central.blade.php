@@ -10,7 +10,7 @@
                 <p class="importante">¡Adelante!</p><br>
             </div>
             
-            <form class="form-inline" action="{{route('registro')}}" method="get">        
+            <form class="form-inline" action="{{route('registro-u')}}" method="get">        
                 <a class="text-left form-group">Cedula</a><br>
                 
                 

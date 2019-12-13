@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <nav class="navbar navbar-expand-md col-12 menu navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-md col-12 menu navbar-dark fixed-top sombra">
     <!-- Brand -->
 <a class="navbar-brand col-1" href="{{route('hom')}}">Inicio</a>
     

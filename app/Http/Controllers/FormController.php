@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+Use App\Model\Paciente;
 
 class FormController extends Controller
 {
@@ -11,9 +12,16 @@ class FormController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function disfuncion()
     {
         //
+        return view('formularios.Registro.disfuncion');
+    }
+
+    public function guardar_disfuncion(Request $request)
+    {
+        //
+        return view('formularios.Registro.disfuncion');
     }
 
     /**
@@ -22,7 +30,10 @@ class FormController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function guardar_user(Request $request){
-        $datos_validados = $request->validate([
+        $prueba=false;
+        
+        if(!$prueba){
+            $datos_validados = $request->validate([
             'cedula'=>'required|max:8',
             'dni'=>'required|image',
             'foto-user'=>'required|image',
@@ -48,10 +59,11 @@ class FormController extends Controller
         
         
         $paciente = new Paciente();
-        $paciente->paci_ced = $request->input("ced");
+        $paciente->paci_ced = $request->input('ced');
         $paciente->paci_no1 = $request->input('nombre1');
         $paciente->save();
-        return view('sesion.disfuncion');
+        };
+        return redirect()->route('registro-d');
         // return redirect()->route('trainers.index');
     }
 
