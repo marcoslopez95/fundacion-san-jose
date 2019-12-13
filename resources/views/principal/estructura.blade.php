@@ -42,7 +42,8 @@
             @yield('contenido')
             </main>
             <div class="separador"></div>
-            @include('principal.footer')
+            
         </div>
+        @include('principal.footer')
     </body>
 </html>
