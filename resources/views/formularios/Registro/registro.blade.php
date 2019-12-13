@@ -61,7 +61,7 @@
                 <input type="date" name="fecha-nacimiento" id="" class="form-control">
             </div>
         </div>
-        
+
         
     </div>
     
