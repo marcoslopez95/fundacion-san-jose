@@ -13,6 +13,7 @@ class PacienteTableSeeder extends Seeder
     {
         //
 
+    
 
         factory(Paciente::class,30)->create();
     }
