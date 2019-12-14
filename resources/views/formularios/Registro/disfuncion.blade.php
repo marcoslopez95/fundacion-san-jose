@@ -20,8 +20,13 @@
             <div class="pt-2 bg-light col-sm-12 border border-top-0 border-left-0 border-right-0">
             <span class="pl-5"> Bienvenido, <b>Marcos López</b></span>
             </div>
-            
-            
+            {{-- <component v-bind:is="pestaña">
+                <ejemplo></ejemplo>
+                <Modal></Modal>
+            </component> --}}
+            <pesta></pesta>
+            {{-- <component v-bind:is="ejemplo"></component>
+            <component v-bind:is="ejemplo"></component> --}}
     </div>
     </form>
 </div><!-- Fin del card body-->
